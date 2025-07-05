@@ -1,0 +1,35 @@
+# PNP Television Bot - Requirements (CON SUPERVISOR)
+# ===================================================
+
+# SUPERVISOR - ESENCIAL para proceso management
+supervisor>=4.2.0
+
+# Core Telegram Bot Framework
+python-telegram-bot[all]>=20.0
+
+# Async PostgreSQL Database
+asyncpg>=0.28.0
+psycopg2-binary>=2.9.0
+
+# Web Framework for Admin Panel
+fastapi>=0.100.0
+uvicorn>=0.20.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# HTTP Requests
+httpx>=0.24.0
+requests>=2.31.0
+
+# Date and Time Handling
+python-dateutil>=2.8.0
+
+# JSON and Data Processing
+pydantic>=2.0.0
+
+# Security (COMPATIBLE VERSIONS)
+cryptography>=41.0.0,<46.0.0
+
+# Async Support
+aiofiles>=23.0.0
