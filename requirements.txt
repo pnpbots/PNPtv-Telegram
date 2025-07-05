@@ -1,35 +1,44 @@
-# PNP Television Bot - Requirements (CON SUPERVISOR)
-# ===================================================
+# Core dependencies with job queue support
+python-telegram-bot[job-queue]>=20.0,<21.0
+asyncpg>=0.27.0,<1.0
+python-dotenv>=1.0.0,<2.0
 
-# SUPERVISOR - ESENCIAL para proceso management
-supervisor>=4.2.0
+# Process management
+supervisor==4.2.5
 
-# Core Telegram Bot Framework
-python-telegram-bot[all]>=20.0
+# Admin panel and webhook dependencies
+fastapi>=0.100.0,<1.0
+uvicorn[standard]>=0.23.0,<1.0
 
-# Async PostgreSQL Database
-asyncpg>=0.28.0
-psycopg2-binary>=2.9.0
+# Job queue dependencies (APScheduler)
+APScheduler>=3.10.0,<4.0
 
-# Web Framework for Admin Panel
-fastapi>=0.100.0
-uvicorn>=0.20.0
+# Database and async
+aiohttp>=3.8.0,<4.0
 
-# Environment Variables
-python-dotenv>=1.0.0
+# Additional utilities
+pydantic>=2.0.0,<3.0
+pydantic-settings>=2.0.0,<3.0
 
-# HTTP Requests
-httpx>=0.24.0
-requests>=2.31.0
+# Security and validation
+cryptography>=41.0.0,<42.0
 
-# Date and Time Handling
-python-dateutil>=2.8.0
+# Logging and monitoring
+structlog>=23.0.0,<24.0
 
-# JSON and Data Processing
-pydantic>=2.0.0
+# Production optimizations
+gunicorn>=21.0.0,<22.0
 
-# Security (COMPATIBLE VERSIONS)
-cryptography>=41.0.0,<46.0.0
+# Rate limiting and backoff
+backoff>=2.2.0,<3.0
 
-# Async Support
-aiofiles>=23.0.0
+# System monitoring
+psutil>=5.9.0,<6.0
+
+# Development and testing dependencies (optional)
+pytest>=7.0.0,<8.0
+pytest-asyncio>=0.21.0,<1.0
+pytest-mock>=3.10.0,<4.0
+
+# HTTP security
+httpx>=0.24.0,<1.0
